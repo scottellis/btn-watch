@@ -1,0 +1,17 @@
+# Use this makefile for a native build on the gumstix
+# Example: 
+# make -f Makefile-native
+
+CC = gcc
+CFLAGS = -Wall
+
+TARGET = btn-watch
+
+$(TARGET): btn-watch.c
+	$(CC) $(CFLAGS) btn-watch.c -o $(TARGET)
+
+clean:
+	rm -f $(TARGET)
+
+
+
